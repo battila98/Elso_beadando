@@ -25,30 +25,46 @@ namespace Elso_Beadando
         static void feladat1()
         {
             int max = 0;
-            int min = lista[0];
+           
             //var end
             Console.WriteLine("Adja meg hány darab számot fog megadni.");
-            int dbszam;
-            dbszam = int.Parse(Console.ReadLine());
-            Console.WriteLine("Adja meg a számokat pls!");
-            for (int i = 0; i < dbszam; i++)
+            
+            try
             {
-                lista.Add(int.Parse(Console.ReadLine()));
+                int dbszam;
+                dbszam = int.Parse(Console.ReadLine());
+                Console.WriteLine("Adja meg a számokat pls!");
+                for (int i = 0; i < dbszam; i++)
+                {
+                    lista.Add(int.Parse(Console.ReadLine()));
+                }
+                int min = lista[0];
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    if (max < lista[i])
+                    {
+                        max = lista[i];
+                    }
+                    if (min > lista[i])
+                    {
+                        min = lista[i];
+                    }
+                }
+                Console.WriteLine("A legnagyobb szám a {0} volt", max);
+                Console.WriteLine("A legkisebb szám a {0} volt", min);
             }
-
-            for (int i = 0; i < lista.Count; i++)
+            catch (Exception)
             {
-                if (max < lista[i]) 
-                {
-                    max = lista[i];
-                }
-                if (min>lista[i])
-                {
-                    min = lista[i];
-                }
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Nem számot adtál meg, a program most leáll. Nyomj ENTER billentyűt amígy a program kilép.");
+                Console.ResetColor();
+                Console.ReadKey();
+                throw;
+                
             }
-            Console.WriteLine("A legnagyobb szám a {0} volt", max);
-            Console.WriteLine("A legkisebb szám a {0} volt", min);
+            
+           
+           
         }
         
 
