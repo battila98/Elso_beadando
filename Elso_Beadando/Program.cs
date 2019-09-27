@@ -12,7 +12,7 @@ namespace Elso_Beadando
         
 
 
-        //var end
+        //**var end
         static void Main(string[] args)
         {
             feladat1();
@@ -25,6 +25,8 @@ namespace Elso_Beadando
         static void feladat1()
         {
             int max = 0;
+            int min = lista[0];
+            //var end
             Console.WriteLine("Adja meg hány darab számot fog megadni.");
             int dbszam;
             dbszam = int.Parse(Console.ReadLine());
@@ -40,8 +42,13 @@ namespace Elso_Beadando
                 {
                     max = lista[i];
                 }
+                if (min>lista[i])
+                {
+                    min = lista[i];
+                }
             }
-            Console.WriteLine("A legnagyobb szám a {0} volt",max);
+            Console.WriteLine("A legnagyobb szám a {0} volt", max);
+            Console.WriteLine("A legkisebb szám a {0} volt", min);
         }
         
 
