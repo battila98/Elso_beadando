@@ -9,26 +9,18 @@ namespace Elso_Beadando
     class Program
     {
         static List<int> lista = new List<int>();
-        
-
-
         //**var end
         static void Main(string[] args)
         {
             feladat1();
-
-
-
             Console.ReadLine();
         }
         //**Main end
         static void feladat1()
         {
-            int max = 0;
-           
+            int max = 0;        
             //var end
-            Console.WriteLine("Adja meg hány darab számot fog megadni.");
-            
+            Console.WriteLine("Adja meg hány darab számot fog megadni.");            
             try
             {
                 int dbszam;
@@ -58,16 +50,9 @@ namespace Elso_Beadando
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Nem számot adtál meg, a program most leáll. Nyomj ENTER billentyűt amígy a program kilép.");
                 Console.ResetColor();
-                Console.ReadKey();
-                throw;
-                
-            }
-            
-           
-           
+                //Console.ReadKey();
+            }      
         }
         
-
-
     }
 }
