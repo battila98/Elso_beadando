@@ -25,8 +25,11 @@ namespace Elso_Beadando
         static void feladat1()
         {
             int max = 0;
-            Console.WriteLine("Adjon meg 10 számot!");
-            for (int i = 0; i < 10; i++)
+            Console.WriteLine("Adja meg hány darab számot fog megadni.");
+            int dbszam;
+            dbszam = int.Parse(Console.ReadLine());
+            Console.WriteLine("Adja meg a számokat pls!");
+            for (int i = 0; i < dbszam; i++)
             {
                 lista.Add(int.Parse(Console.ReadLine()));
             }
@@ -39,8 +42,8 @@ namespace Elso_Beadando
                 }
             }
             Console.WriteLine("A legnagyobb szám a {0} volt",max);
-
         }
+        
 
 
     }
